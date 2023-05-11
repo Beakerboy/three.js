@@ -29,7 +29,8 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm ci
-
+      - name: Coveralls
+        uses: coverallsapp/github-action@v2
       - name: === Lint testing ===
         run: npm run lint
 
