@@ -23,7 +23,7 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v2
       - name: Install Node
-        uses: npm install
+        run: npm install
       - name: === Lint testing ===
         run: npm run lint
   unit:
