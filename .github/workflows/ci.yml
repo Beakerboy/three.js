@@ -23,9 +23,13 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v2
       - name: Install Node
-        run: npm install
-      - name: View lock file
-        run: cat package-lock.json
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+
       - name: === Lint testing ===
         run: npm run lint
   unit:
