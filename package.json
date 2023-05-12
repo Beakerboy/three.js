@@ -121,7 +121,7 @@
     "directories": {}
   },
   "c8": {
-    "all": true,
+    "src": "./src",
     "reporter": [
       "lcov",
       "text-summary"
